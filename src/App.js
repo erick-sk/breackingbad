@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import Phase from './components/Phrase';
 
 const Container = styled.div`
   display: flex;
@@ -24,12 +25,15 @@ const Button = styled.button`
 `;
 
 function App() {
+  // state phrases
+  const [phrase, getPhrase] = useState({});
+
   const requestAPI = async () => {
     const api = await fetch(
       'https://breaking-bad-quotes.herokuapp.com/v1/quotes'
     );
     const phrase = await api.json();
-    console.log(phrase);
+    getPhrase(phrase[0]); /* (phrase[0]) 0 aoumnt phrases */
 
     // const phrase = api.then( reply => reply.json());
     // phrase.then(result => console.log(result));
@@ -37,6 +41,7 @@ function App() {
 
   return (
     <Container>
+      <Phase phrase={phrase} />
       <Button onClick={requestAPI /* () => requestAPI() or requestAPI() */}>
         Get Quote
       </Button>
