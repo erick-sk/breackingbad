@@ -22,6 +22,10 @@ const Button = styled.button`
   margin-top: 3rem;
   padding: 1rem 3rem;
   border: 2px solid black;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 function App() {
