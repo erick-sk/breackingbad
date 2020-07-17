@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Phase from './components/Phrase';
 
@@ -19,12 +19,16 @@ const Button = styled.button`
   background-size: 300px;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 1rem;
   border: 2px solid black;
+  transition: background-size 0.5s ease;
 
-  &:hover {
+  :hover {
     cursor: pointer;
+    background-size: 400px;
   }
 `;
 
@@ -42,6 +46,11 @@ function App() {
     // const phrase = api.then( reply => reply.json());
     // phrase.then(result => console.log(result));
   };
+
+  // load one phrase
+  useEffect(() => {
+    requestAPI();
+  }, []);
 
   return (
     <Container>
