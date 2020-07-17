@@ -24,8 +24,15 @@ const Button = styled.button`
 `;
 
 function App() {
-  const requestAPI = () => {
-    console.log('request...');
+  const requestAPI = async () => {
+    const api = await fetch(
+      'https://breaking-bad-quotes.herokuapp.com/v1/quotes'
+    );
+    const phrase = await api.json();
+    console.log(phrase);
+
+    // const phrase = api.then( reply => reply.json());
+    // phrase.then(result => console.log(result));
   };
 
   return (
