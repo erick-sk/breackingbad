@@ -1,5 +1,5 @@
 # Breackingbad Phrases
-[![Netlify Status](https://api.netlify.com/api/v1/badges/de5e406b-3138-4cbf-889c-a3859754e84b/deploy-status)](https://app.netlify.com/sites/ericksaavedra/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/de5e406b-3138-4cbf-889c-a3859754e84b/deploy-status)](https://breakingbad-erick-sk.netlify.app)
 
 This small project is designed to show at random the best phrases rescued from one of the best series broadcast.
 
